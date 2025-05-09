@@ -38,3 +38,22 @@ def quiz():
 
     for i, pergunta in enumerate(perguntas):
         print(f"Pergunta {i+1}: {pergunta['pergunta']}")
+         for opcao in pergunta['opcoes']:
+            print(opcao)
+        resposta = input("Sua resposta (a/b/c/d): ").lower()
+
+        if resposta == pergunta['resposta']:
+            print("✅ Resposta correta!\n")
+            pontos += 1
+        else:
+            print(f"❌ Resposta errada! A resposta correta era: {pergunta['resposta']}\n")
+
+    return pontos
+
+def main():
+    nome = cadastro()
+    pontuacao = quiz()
+    print(f"{nome}, você terminou o quiz com {pontuacao} de {5} pontos!")
+
+if __name__ == "__main__":
+    main()
