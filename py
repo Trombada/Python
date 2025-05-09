@@ -17,3 +17,24 @@ def quiz():
             "opcoes": ["a) EUA", "b) China", "c) Rússia", "d) Índia"],
             "resposta": "c"
         },
+        {
+            "pergunta": "Quanto é 9 x 7?",
+            "opcoes": ["a) 63", "b) 56", "c) 72", "d) 64"],
+            "resposta": "a"
+        },
+        {
+            "pergunta": "Qual é o maior planeta do sistema solar?",
+            "opcoes": ["a) Terra", "b) Júpiter", "c) Saturno", "d) Marte"],
+            "resposta": "b"
+        },
+        {
+            "pergunta": "Em que continente está localizado o Egito?",
+            "opcoes": ["a) Europa", "b) América", "c) África", "d) Ásia"],
+            "resposta": "c"
+        }
+    ]
+
+    pontos = 0
+
+    for i, pergunta in enumerate(perguntas):
+        print(f"Pergunta {i+1}: {pergunta['pergunta']}")
